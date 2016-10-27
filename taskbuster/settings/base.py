@@ -23,14 +23,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'j7u=2%_efm8jd95p&s0+d2dxj*x%cx9l(cu8+80lc)d13un^e0'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-
-ALLOWED_HOSTS = []
-
-
-# GET ENVIROMENT vaiables
 
 def get_env_variable(var_name):
     try:
@@ -41,6 +33,10 @@ def get_env_variable(var_name):
 
 
 SECRET_KEY = get_env_variable('SECRET_KEY')
+
+# SECURITY WARNING: don't run with debug turned on in production!
+
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -70,7 +66,7 @@ ROOT_URLCONF = 'taskbuster.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, "templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -115,3 +111,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
