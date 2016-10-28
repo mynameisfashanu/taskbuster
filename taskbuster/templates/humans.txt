@@ -4,12 +4,14 @@
 # TEAM
 
     <name> -- <role> -- <twitter>
+    Fashanu Willies -- Software Engineer - @mynameisfashanu
 
 # THANKS
 
     <name>
+    Thank you real python and marina for this awesome tutorial.
 
 # TECHNOLOGY COLOPHON
-
+    Django
     HTML5, CSS3
     jQuery, Modernizr

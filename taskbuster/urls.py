@@ -19,5 +19,7 @@ from . import views
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', views.home, name="home")
+    url(r'^$', views.home, name="home"),
+    url(r'^(?P<filename>(robots.txt)|(humans.txt))$',
+        views.home_files,name="home-files"),
 ]

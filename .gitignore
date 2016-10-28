@@ -91,3 +91,5 @@ ENV/
 # databases
 db.sqlite3
 TaskBuster.sublime-workspace
+.coverage
+htmlcov
